@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DIT Admin – Learn, Grow, Succeed</title>
+<meta name="description" content="DIT Admin is a blogger website with professional blogs, step-by-step tutorials, tech guides and tips & tricks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--surface:#141210;--line:#2e2615;--gold:#e5b53c;--gold2:#b8801f;--ink:#f3efe6;--muted:#a9a292;color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:1.0625rem;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:70rem;margin:0 auto;padding:0 1.5rem}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-top:1rem;padding-bottom:1rem}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-weight:800;font-size:1.2rem}
+.brand img{width:44px;height:44px;border-radius:50%}
+nav{display:flex;gap:1.6rem;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--gold)}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;border:1.5px solid var(--gold);color:var(--gold);background:none;font:inherit;font-weight:700;cursor:pointer}
+.btn:hover{background:rgba(229,181,60,.1)}
+.btn.solid{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1204;border-color:transparent}
+.btn.solid:hover{filter:brightness(1.1)}
+.actions{display:flex;gap:.9rem;flex-wrap:wrap}
+.hero{padding:3rem 0 3.5rem}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center;margin-bottom:3rem}
+.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.05;letter-spacing:-.035em;font-weight:800;margin:0 0 1.1rem}
+.hero p{color:var(--muted);max-width:34rem;margin:0 0 1.75rem}
+.hero .emblem{width:100%;max-width:340px;justify-self:center;border-radius:50%;box-shadow:0 0 90px rgba(229,181,60,.18)}
+.banner{display:block;width:100%;height:auto;border-radius:1rem;border:1px solid var(--line)}
+section.block{padding:4.5rem 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.7rem,3.2vw,2.4rem);letter-spacing:-.025em;line-height:1.15;margin:0 0 .7rem}
+.lead{color:var(--muted);max-width:36rem;margin:0 0 2.25rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.about p{color:var(--muted);margin:0 0 1rem}
+.facts{display:grid;gap:1rem}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1.25rem 1.5rem}
+.fact b{display:block;color:var(--gold);font-size:1.1rem}
+.fact span{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1.6rem}
+.card h3{margin:0 0 .5rem;font-size:1.2rem;color:var(--gold)}
+.card p{margin:0;color:var(--muted);font-size:1rem}
+.pf{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.work{background:var(--surface);border:1px solid var(--line);border-radius:1rem;overflow:hidden}
+.thumb{aspect-ratio:16/10;display:flex;align-items:flex-end;padding:1rem;background:linear-gradient(135deg,#2a2010,#0a0a0a 70%);border-bottom:1px solid var(--line);font-weight:800;font-size:1.5rem;color:var(--gold);letter-spacing:-.02em}
+.work div.t{padding:1.25rem 1.4rem 1.5rem}
+.work h3{margin:0 0 .35rem;font-size:1.15rem}
+.work p{margin:0;color:var(--muted);font-size:1rem}
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:start}
+.info p{color:var(--muted);margin:0 0 1.5rem}
+.info dl{margin:0}.info dt{color:var(--muted);font-size:.95rem}.info dd{margin:0 0 1rem;font-weight:700;font-size:1.15rem}
+.info dd a{color:var(--gold);text-decoration:none}
+form{background:var(--surface);border:1px solid var(--line);border-radius:1.25rem;padding:2rem;display:grid;gap:1.1rem}
+label{display:grid;gap:.4rem;font-weight:500}
+input,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;width:100%}
+input:focus,textarea:focus{outline:2px solid var(--gold);border-color:var(--gold)}
+textarea{min-height:8rem;resize:vertical}
+footer{border-top:1px solid var(--line);padding:3rem 0 2rem;color:var(--muted);font-size:.97rem}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;margin-bottom:2rem}
+.foot h4{margin:0 0 .8rem;color:var(--ink);font-size:1rem}
+.foot a{display:block;text-decoration:none;margin-bottom:.45rem}
+.foot a:hover{color:var(--gold)}
+.foot p{margin:.8rem 0 0;max-width:20rem}
+.copy{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:1.5rem}
+@media (max-width:860px){.grid,.pf{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){.hero-grid,.about,.contact,.foot{grid-template-columns:1fr;gap:1.75rem}.hero .emblem{max-width:180px;order:-1;justify-self:start}.grid,.pf{grid-template-columns:1fr}nav{display:none}form{padding:1.4rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="brand" href="#top"><img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/saves/AA8Ys26Jv33IOvOq0ZTsfaE9e-WX7uBlYy6cUa5D3orBBTsMQxDZUupcWgMgrfOqSwZhrKhhCUGwsgk_q_AqywbPbu7_qYbyf_88m6U3FdFsj6shVrcPlp9NGO8zgKAD6V5KLmJm211FQ0ZRwDvJlTnprNdUBtyptdGrSu2WBXONdwb7iaB4Y3OV17dF2MtA=s1254-w1254-h1254-n-k?authuser=0" alt="DIT Admin logo">DIT Admin</a>
+<nav aria-label="Main"><a href="#top">Home</a><a href="#about">About us</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact us</a></nav>
+</div></header>
+<main>
+<section class="hero" id="top"><div class="wrap">
+<div class="hero-grid">
+<div>
+<h1>Learn, grow and succeed with DIT Admin.</h1>
+<p>Your one-stop destination for professional blogs, tutorials, tech guides, and tips and tricks that help you work smarter.</p>
+<div class="actions"><a class="btn solid" href="#services">Explore now</a><a class="btn" href="tel:+923267272742">Call +92 326 7272742</a></div>
+</div>
+<img class="emblem" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/saves/AA8Ys26Jv33IOvOq0ZTsfaE9e-WX7uBlYy6cUa5D3orBBTsMQxDZUupcWgMgrfOqSwZhrKhhCUGwsgk_q_AqywbPbu7_qYbyf_88m6U3FdFsj6shVrcPlp9NGO8zgKAD6V5KLmJm211FQ0ZRwDvJlTnprNdUBtyptdGrSu2WBXONdwb7iaB4Y3OV17dF2MtA=s1254-w1254-h1254-n-k?authuser=0" alt="DIT Admin crown emblem">
+</div>
+<img class="banner" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/saves/AA8Ys26ezXG-__yliSvmpXC2dZB-T3tDRb1XaxAbbm_7mFRQQfyv5Sxf0icn0KOEWQSoH9k4jSykgN_ZWUqoBd7_MJ-jyX9O63bvLYiLA4iunsrBO1D-cqJxQaaM_ikS4s9fMuT3iIStIHzWnEJIwziPOSiYz2cqvc2HY2DLsIqcgbQLKCBEZS-Kwnlvg_ZT=s1983-w1983-h793-n-k?authuser=0" alt="DIT Admin official blogger website: learn, grow, succeed">
+</div></section>
+
+<section class="block" id="about"><div class="wrap about">
+<div>
+<h2>About us</h2>
+<p>DIT Admin is an official blogger website built around one idea: learn, grow, succeed. We publish professional, easy-to-follow content on technology and productivity so you can solve problems and build skills with confidence.</p>
+<p>Every post is written to be useful on the first read, with clear steps and no filler.</p>
+</div>
+<div class="facts">
+<div class="fact"><b>Practical</b><span>Guides you can follow and use straight away.</span></div>
+<div class="fact"><b>Professional</b><span>Accurate, well-organised and up to date.</span></div>
+<div class="fact"><b>Easy to follow</b><span>Plain language, step by step.</span></div>
+</div>
+</div></section>
+
+<section class="block" id="services"><div class="wrap">
+<h2>Our services</h2>
+<p class="lead">Everything you need to learn something new and put it to work.</p>
+<div class="grid">
+<div class="card"><h3>Blogs</h3><p>Informative and useful articles on topics that matter to you.</p></div>
+<div class="card"><h3>Tutorials</h3><p>Step-by-step guides that take you from start to finish.</p></div>
+<div class="card"><h3>Tips &amp; Tricks</h3><p>Quick techniques that save time and help you work smarter.</p></div>
+<div class="card"><h3>Tech &amp; More</h3><p>The latest updates and guides from the world of technology.</p></div>
+</div>
+</div></section>
+
+<section class="block" id="portfolio"><div class="wrap">
+<h2>Our portfolio</h2>
+<p class="lead">A selection of the content we create.</p>
+<div class="pf">
+<div class="work"><div class="thumb" style="padding:0"><svg viewBox="0 0 320 200" style="display:block;width:100%;height:100%" role="img" aria-label="Blog article illustration"><rect x="90" y="26" width="140" height="148" rx="10" fill="#0a0a0a" stroke="#e5b53c" stroke-width="2.5"/><rect x="106" y="44" width="84" height="11" rx="3" fill="#e5b53c"/><rect x="106" y="68" width="108" height="6" rx="3" fill="#5a4a26"/><rect x="106" y="82" width="96" height="6" rx="3" fill="#5a4a26"/><rect x="106" y="96" width="108" height="6" rx="3" fill="#5a4a26"/><rect x="106" y="110" width="70" height="6" rx="3" fill="#5a4a26"/><rect x="106" y="128" width="52" height="32" rx="4" fill="#b8801f"/><line x1="254" y1="46" x2="222" y2="112" stroke="#e5b53c" stroke-width="10" stroke-linecap="round"/></svg></div><div class="t"><h3>Featured blog posts</h3><p>In-depth articles on technology and productivity.</p></div></div>
+<div class="work"><div class="thumb" style="padding:0"><svg viewBox="0 0 320 200" style="display:block;width:100%;height:100%" role="img" aria-label="Video tutorial illustration"><rect x="68" y="30" width="184" height="116" rx="9" fill="#0a0a0a" stroke="#e5b53c" stroke-width="3"/><polygon points="146,66 146,108 184,87" fill="#e5b53c"/><rect x="90" y="124" width="140" height="5" rx="2.5" fill="#5a4a26"/><rect x="90" y="124" width="62" height="5" rx="2.5" fill="#e5b53c"/><rect x="46" y="152" width="228" height="11" rx="5.5" fill="#b8801f"/></svg></div><div class="t"><h3>Step-by-step tutorials</h3><p>Practical guides with clear instructions from start to finish.</p></div></div>
+<div class="work"><div class="thumb" style="padding:0"><svg viewBox="0 0 320 200" style="display:block;width:100%;height:100%" role="img" aria-label="Technology gear illustration"><circle cx="160" cy="100" r="56" fill="none" stroke="#b8801f" stroke-width="18" stroke-dasharray="14 15.3"/><circle cx="160" cy="100" r="44" fill="none" stroke="#e5b53c" stroke-width="14"/><circle cx="160" cy="100" r="17" fill="#e5b53c"/><circle cx="160" cy="100" r="7" fill="#0a0a0a"/></svg></div><div class="t"><h3>Tech guides</h3><p>Reviews, updates and how-tos from the world of tech.</p></div></div>
+</div>
+</div></section>
+
+<section class="block" id="contact"><div class="wrap contact">
+<div class="info">
+<h2>Contact us</h2>
+<p>Have a question, an idea, or want to work with us? Send a message and we’ll get back to you.</p>
+<dl>
+<dt>Phone and WhatsApp</dt><dd><a href="tel:+923267272742">+92 326 7272742</a></dd>
+<dt>Website</dt><dd>www.ditadmin.com</dd>
+</dl>
+</div>
+<form id="cf">
+<label>Your name<input id="n" name="name" autocomplete="name" required></label>
+<label>Your message<textarea id="m" name="message" required></textarea></label>
+<button class="btn solid" type="submit">Send on WhatsApp</button>
+</form>
+</div></section>
+</main>
+<footer><div class="wrap">
+<div class="foot">
+<div><a class="brand" href="#top"><img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/saves/AA8Ys26Jv33IOvOq0ZTsfaE9e-WX7uBlYy6cUa5D3orBBTsMQxDZUupcWgMgrfOqSwZhrKhhCUGwsgk_q_AqywbPbu7_qYbyf_88m6U3FdFsj6shVrcPlp9NGO8zgKAD6V5KLmJm211FQ0ZRwDvJlTnprNdUBtyptdGrSu2WBXONdwb7iaB4Y3OV17dF2MtA=s1254-w1254-h1254-n-k?authuser=0" alt="">DIT Admin</a><p>Official blogger website. Learn, grow, succeed.</p></div>
+<div><h4>Quick links</h4><a href="#top">Home</a><a href="#about">About us</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact us</a></div>
+<div><h4>Contact</h4><a href="tel:+923267272742">+92 326 7272742</a><a href="https://wa.me/923267272742">WhatsApp</a><span>www.ditadmin.com</span></div>
+</div>
+<div class="copy"><span>© 2026 DIT Admin. All rights reserved.</span><span>Learn | Grow | Succeed</span></div>
+</div></footer>
+<script>
+document.getElementById('cf').addEventListener('submit',function(e){e.preventDefault();
+var t='Hello DIT Admin, I’m '+document.getElementById('n').value+'. '+document.getElementById('m').value;
+window.open('https://wa.me/923267272742?text='+encodeURIComponent(t),'_blank','noopener');});
+</script>
+</body>
+</html>
